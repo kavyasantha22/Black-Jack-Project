@@ -63,6 +63,8 @@ This is an object-oriented implementation of the classic **Blackjack** card game
 
 ## Code Highlights 📂
 
+### Python
+
 - **`main.py`**:
   - Handles the game flow and user interactions.
   - Includes helper functions for clearing the terminal, getting user input, and managing game rounds.
@@ -77,5 +79,34 @@ This is an object-oriented implementation of the classic **Blackjack** card game
   - `choose_action`: Guides the player through their turn.
   - `print_game_summary`: Displays a final summary with gameplay stats and a plot of money history.
   - `main`: Orchestrates the game logic, including player and dealer turns, round management, and game conclusion.
+
+### Java
+## Code Structure 📂
+
+- **`Player.java`**:
+  - Inherits from `Person` and manages player-specific attributes and actions:
+    - Money management.
+    - Betting logic.
+    - Actions like `hit`, `stand`, and `doubleDown`.
+  - Implements game-related methods:
+    - `placeBet(int betAmount)`: Places a valid bet if the player has enough money.
+    - `lose()`: Deducts the bet amount from the player's money on a loss.
+    - `win()`: Adds the bet amount to the player's money on a win.
+
+- **`Deck.java`**:
+  - Manages deck creation, shuffling, and dealing of cards.
+
+- **`Card.java`**:
+  - Represents individual cards with suits, ranks, and values.
+
+- **`Person.java`**:
+  - Base class for both `Player` and `Dealer`.
+  - Handles card management and hand value calculations.
+
+- **`Main.java`**:
+  - Contains the main game loop:
+    - Initializes players and the deck.
+    - Manages rounds, including betting, player actions, and dealer logic.
+    - Displays outcomes and tracks statistics.
 
 ---
