@@ -92,6 +92,13 @@ This is an object-oriented implementation of the classic **Blackjack** card game
     - `lose()`: Deducts the bet amount from the player's money on a loss.
     - `win()`: Adds the bet amount to the player's money on a win.
 
+- **`Dealer.java`**:
+   - Inherits from `Person` and manages dealer-specific attributes and actions:
+       - Play until card value 17 or more.
+
+- **`BlackJackGame.java`**:
+  - Setting up the game logic
+    
 - **`Deck.java`**:
   - Manages deck creation, shuffling, and dealing of cards.
 
