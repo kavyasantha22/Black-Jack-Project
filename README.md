@@ -1,34 +1,81 @@
-# Blackjack Game 🎴
+# Blackjack Game in Python/Java 🃏
 
-This repository contains two implementations of the classic Blackjack game:
-1. **Python Version**: A feature-rich implementation using Python's simplicity and flexibility.
-2. **Java Version**: A robust and structured implementation using Java's OOP capabilities.
+This is an object-oriented implementation of the classic **Blackjack** card game in two vesion, Python and Java. The project simulates a single-player game against a dealer, featuring game logic, betting mechanics, and statistics tracking. The code integrates user-friendly features, clear terminal UI, and data visualization for an engaging experience.
 
 ---
 
-## Features
-### Common Features in Both Versions
-- 🃏 **Card Deck Management**: Shuffling, dealing, and resetting cards.
-- 🤖 **Dealer AI**: Dealer plays according to Blackjack rules.
-- 💰 **Betting System**: Players can bet and track their balance.
-- 📊 **Game Statistics**: Visual or console-based feedback on performance.
+## Features 🎮
 
-### Python Version
-- **Dynamic and Concise Code**: Leverages Python's simplicity for faster prototyping.
-- **Graphical Money Visualization**: Uses `Matplotlib` to plot money progression.
-- **Dependency Light**: Minimal external libraries required.
+- **Card and Deck Management**:
+  - Standard 52-card deck with shuffle and reshuffle mechanics.
+  - Cards dynamically generated and managed using Python/Java's OOP.
 
-### Java Version
-- **Interactive Console Experience**: Enhanced user prompts and text-based effects.
-- **Clear Code Structure**: Implements Object-Oriented Programming principles.
-- **Cross-Platform Compatibility**: Runs on any machine with a Java runtime.
+- **Game Mechanics**:
+  - Traditional Blackjack rules:
+    - Aces count as 1 or 11 depending on the hand's value.
+    - Dealer draws until their hand value is at least 17.
+  - Player actions:
+    - **Hit**
+    - **Stand**
+    - **Double Down**
+  - Bust checking and hand adjustments for Aces.
+  - Clear terminal displays for each game round.
+
+- **Betting System**:
+  - Players can place bets and double down.
+  - Tracks the player's money and bet history.
+  - Handles cases for insufficient money to place bets or double down.
+
+- **Statistics and Visualization**:
+  - Tracks wins, losses, and win rate.
+  - Visualizes money history using `matplotlib`.
+  - Provides a detailed game summary at the end, including time spent and financial performance.
+
+- **Interactive Gameplay**:
+  - User-friendly prompts for actions such as age verification, name input, and betting.
+  - Detailed display of cards for both player and dealer.
+  - Automatic reshuffling when the deck is exhausted.
+
+- **Object-Oriented Design**:
+  - Modular classes (`Card`, `Deck`, `Player`, `Dealer`, etc.) for easy customization and extension.
 
 ---
 
-## Installation and Setup
+## How to Play 🎲
 
-### Python Version
-1. **Clone the Repository**:
-   ```bash
-   git clone git@github.com:kavyasantha22/BlackJack-Project.git
-   cd BlackJack-Project/python-version
+1. **Setup**:
+   - Run the program and follow the prompts to input your name, age, and starting money.
+   - A shuffled deck is initialized for each game.
+
+2. **Gameplay**:
+   - Place a bet at the start of each round.
+   - Decide to:
+     - **Hit**: Take another card.
+     - **Stand**: End your turn.
+     - **Double Down**: Double your bet and take one more card.
+   - Try to beat the dealer's hand without exceeding 21.
+
+3. **Outcome**:
+   - The program automatically determines whether the player wins, loses, or the dealer busts.
+   - A detailed summary of the game, including financial performance and win rate, is shown at the end.
+
+---
+
+## Code Highlights 📂
+
+- **`main.py`**:
+  - Handles the game flow and user interactions.
+  - Includes helper functions for clearing the terminal, getting user input, and managing game rounds.
+  - Implements a `summary` decorator to track game duration and display a final summary.
+
+- **`objects.py`**:
+  - Core logic for the game, including card management, betting mechanics, and game rules.
+
+- **Functions in `main.py`**:
+  - `get_name`, `get_age`, and `get_money`: Collect and validate player input.
+  - `get_bet`: Ensures valid bets within the player's budget.
+  - `choose_action`: Guides the player through their turn.
+  - `print_game_summary`: Displays a final summary with gameplay stats and a plot of money history.
+  - `main`: Orchestrates the game logic, including player and dealer turns, round management, and game conclusion.
+
+---
