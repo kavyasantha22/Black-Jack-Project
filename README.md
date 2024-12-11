@@ -81,7 +81,6 @@ This is an object-oriented implementation of the classic **Blackjack** card game
   - `main`: Orchestrates the game logic, including player and dealer turns, round management, and game conclusion.
 
 ### Java
-## Code Structure 📂
 
 - **`Player.java`**:
   - Inherits from `Person` and manages player-specific attributes and actions:
